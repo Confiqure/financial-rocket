@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Escape Velocity Simulator</title>
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+  <header>
+    <h1>Financial Escape Velocity Simulator</h1>
+    <p>Model your financial growth and simulate your journey to escape velocity.</p>
+  </header>
+
+  <main>
+    <!-- User Input Section -->
+    <section id="user-inputs">
+      <h2>Configure Your Scenario</h2>
+      <form id="scenario-form">
+        <label>
+          Birth Month:
+          <input type="number" id="birthMonth" min="1" max="12" value="1">
+        </label>
+        <label>
+          Birth Year:
+          <input type="number" id="birthYear" min="1900" max="2025" value="1990">
+        </label>
+        <label>
+          Hourly Wage ($/hr):
+          <input type="number" id="hourlyWage" min="0" step="0.01" value="20">
+        </label>
+        <label>
+          Portfolio Size ($):
+          <input type="number" id="portfolioStart" min="0" step="1000" value="100000">
+        </label>
+        <label>
+          Annual Expenses ($):
+          <input type="number" id="annualExpenses" min="0" step="1000" value="40000">
+        </label>
+        <label>
+          Annual Contributions ($):
+          <input type="number" id="annualContributions" min="0" step="1000" value="10000">
+        </label>
+        <button type="button" id="run-simulation">Run Simulation</button>
+      </form>
+    </section>
+
+    <!-- Results Table Section -->
+    <section id="results">
+      <h2>Simulation Results</h2>
+      <table id="simulation-table">
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Start Balance ($)</th>
+            <th>End Balance ($)</th>
+            <th>Total Expenses ($)</th>
+            <th>Total Growth ($)</th>
+          </tr>
+        </thead>
+        <tbody id="yearly-tbody">
+          <!-- Yearly rows will be dynamically inserted here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with ❤️ to help you reach financial escape velocity!</p>
+  </footer>
+
+  <!-- Script Entry -->
+  <script type="module" src="./src/main.ts"></script>
+</body>
+</html>
